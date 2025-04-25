@@ -7,6 +7,52 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" ></RowDefinition>
+            <RowDefinition Height="*"  ></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Traffic Light" FontSize="45" TextAlignment="Center" Foreground="BlueViolet"></TextBlock>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+
+                    <RadioButton Margin="50,20,100,80" Click="RadioButton_Click">
+                        <TextBlock Text="Red"></TextBlock>
+                    </RadioButton>
+
+                    <RadioButton Margin="50,20,100,80" Click="RadioButton_Click_1">
+                        <TextBlock Text="Yellow" ></TextBlock>
+                    </RadioButton>
+
+                    <RadioButton Margin="50,20,100,80" Click="RadioButton_Click_2">
+                        <TextBlock Text="Green"></TextBlock>
+                    </RadioButton>
+
+                </StackPanel>
+
+                <Grid Grid.Column="1">
+
+                    <Image Source="C:\Users\USUARIO\Desktop\PROGRAMACION\C#\C#Bases\ProyectosGenerales\RadioButtonPractice\Light.jpg" Height="383"></Image>
+                    <Ellipse Fill="Red" Margin="158,33,162,276" Name="eRed" Visibility="Hidden"/>
+                    <Ellipse Fill="Yellow" Margin="158,126,162,191" Name="eYellow" Visibility="Hidden"/>
+                    <Ellipse Fill="Green" Margin="158,211,162,98" Name="eGreen" Visibility="Hidden"/>
+
+                </Grid>
+
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>

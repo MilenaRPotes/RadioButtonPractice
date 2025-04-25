@@ -24,5 +24,27 @@ namespace RadioButtonPractice
         {
             InitializeComponent();
         }
+
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            eRed.Visibility = Visibility.Visible;
+            eYellow.Visibility = Visibility.Hidden;
+            eGreen.Visibility = Visibility.Hidden;
+
+        }
+
+        private void RadioButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            eYellow.Visibility = Visibility.Visible;
+            eRed.Visibility = Visibility.Hidden;
+            eGreen.Visibility = Visibility.Hidden;
+        }
+
+        private void RadioButton_Click_2(object sender, RoutedEventArgs e)
+        {
+            eGreen.Visibility = Visibility.Visible;
+            eRed.Visibility = Visibility.Hidden;
+            eYellow.Visibility = Visibility.Hidden;
+        }
     }
 }
